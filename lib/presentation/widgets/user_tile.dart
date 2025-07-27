@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:users_test/domain/entities/user.dart';
+
+class UserTile extends StatelessWidget {
+  final User user;
+
+  const UserTile({super.key, required this.user});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(user.name),
+      subtitle: Text(user.email),
+      trailing: Text(user.phone),
+    );
+  }
+}
